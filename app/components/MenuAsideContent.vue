@@ -1,10 +1,10 @@
 <template>
-  <div class="p-3">
-    <div class="w-full flex flex-col gap-2"       >
+  <div class="p-3 bg-base-100">
+    <div class="w-full flex flex-col gap-2 "       >
       <div
         v-for="(item, index) in items"
         :key="index"
-        class="w-full flex justify-between items-center py-[0.4rem] px-3  btn rounded-lg border-none"
+        class="w-full flex justify-between items-center py-[0.4rem] px-3  btn btn-primary rounded-lg border-none"
         
         >
         <!-- Left item -->
@@ -31,7 +31,7 @@
    
     <!-- Bouton principal -->
     <button
-      class="w-full mt-3 bg-gradient-to-b from-[#bfea36] to-[#48bc49] active:from-emerald-700 active:via-green-700 active:to-teal-700 text-black font-bold py-[0.7rem] px-5 rounded-xl shadow-xl border border-emerald-400/30 transition-all duration-200 mb-6"
+      class="w-full mt-3 btn btn-accent text-black font-bold py-[0.7rem] px-5 rounded-xl shadow-xl transition-all duration-200 mb-6"
     >
       Ganhe R$100 de graça
     </button>
@@ -50,7 +50,7 @@
       <div
         v-for="(item, index) in items2"
         :key="index"
-        class="w-full flex justify-between items-center py-[0.4rem] px-3 btn rounded-lg border border-blue-900/30"
+        class="w-full flex justify-between items-center py-[0.4rem] px-3 btn btn-primary  rounded-lg "
       >
         <!-- Left item -->
           <NuxtLink to="/service" v-if="item.title === 'Suporte ao vivo'">

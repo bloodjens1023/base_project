@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125 backdrop-blur-sm text-white shadow-xl border-b border-blue-800/30 bg-cover overscroll-none z-90 theme-bg"
+    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125  text-white shadow-xl border-b bg-cover overscroll-none z-90 theme-bg"
     :style="{ backgroundImage: bg('/static/webp/OMR6_kmW.webp') }"
   >
     <!-- Decoration image -->
@@ -14,7 +14,7 @@
       <!-- MENU BUTTON -->
       <button
         @click="toggleMenu"
-        class="mr-3 p-2 btn rounded-xl transition-all duration-200"
+        class="mr-3 p-2 btn btn-primary rounded-xl transition-all duration-200"
         aria-label="Back"
       >
         <img
@@ -37,7 +37,7 @@
         <button
           v-if="currentIcon"
           @click="toggleTheme"
-          class="p-2 rounded-full bg-base-100"
+          class="p-2 rounded-full bg-secondary "
         >
           <component :is="currentIcon" class="w-5 h-5" />
         </button>
@@ -59,7 +59,7 @@
         </button>
 
         <button
-          class="bg-gradient-to-b from-[#bfea36] to-[#48bc49] rounded-xl text-black px-3 py-1 text-sm font-semibold whitespace-nowrap"
+          class="btn btn-accent  rounded-xl text-black px-3  text-sm font-semibold whitespace-nowrap"
         >
           {{ t("register") }}
         </button>
@@ -103,7 +103,7 @@ const { theme, setTheme } = useTheme();
 
 const themes = [
   { name: "synthwave", icon: Moon },
-  { name: "aqua", icon: Star },
+  { name: "mytheme", icon: Star },
 ];
 
 const currentTheme = ref<{ name: string; icon: unknown } | null>(null);

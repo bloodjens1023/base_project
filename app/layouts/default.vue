@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen "  >
+  <div class="min-h-screen  bg-white"  >
 
     <!-- default style bg-[#061237]  -->
     <div class="w-full max-w-[500px] mx-auto flex flex-col min-h-screen bg-base-100 ">

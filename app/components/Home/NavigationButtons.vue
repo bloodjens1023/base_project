@@ -83,8 +83,8 @@ onUnmounted(() => observer?.disconnect())
       :class="[
         'tabs-item px-6 py-2 rounded-lg cursor-pointer transition-all duration-200 flex items-center gap-2 min-w-fit whitespace-nowrap',
         tab.active
-          ? 'font-bold bg-linear-to-b from-[#bfea36] to-[#48bc49] text-black shadow-lg scale-105'
-          : 'font-semibold bg-[#15194c] text-gray-300 hover:from-[#252d6b] hover:to-[#1a2148] hover:text-white hover:scale-105'
+          ? 'font-bold btn btn-secondary shadow-lg scale-105'
+          : 'font-semibold btn btn-primary'
       ]"
     >
       <LucideFlame v-if="tab.name==='PG'"/>
@@ -92,13 +92,13 @@ onUnmounted(() => observer?.disconnect())
       
     </div>
   </div>
-  <div class="bg-[#15194c] flex items-center justify-center p-1 rounded-lg">
+  <div class="btn btn-primary flex items-center justify-center p-1 rounded-lg ">
     <LucideSearch size="30" stroke-width="2"/>
     <input
         type="text"
       
         placeholder="Buscar"
-        class="w-auto px-5 py-2 max-w-25 h-[50%]  rounded-xl border-none outline-none text-blue-400 placeholder-blue-400 flex-1"
+        class="w-auto px-5 py-2 max-w-25 h-[50%]  rounded-xl border-none outline-none text-white flex-1"
       />
   </div>
     

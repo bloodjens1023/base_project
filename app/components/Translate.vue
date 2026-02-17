@@ -1,6 +1,6 @@
 <template>
   <div
-        class="w-full flex justify-between items-center py-[0.4rem] px-3 btn rounded-lg border-none"
+        class="w-full flex justify-between items-center py-[0.4rem] px-3 btn btn-primary  rounded-lg border-none"
         @click="open = !open"
         >
         <div class="flex gap-5">

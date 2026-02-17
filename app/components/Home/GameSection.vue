@@ -77,7 +77,7 @@ onMounted(async () => {
           <h2 class="text-xl font-bold  mb-3 px-2" :style="{ color: 'var(--text)' }">
             {{ platform }}
           </h2>
-          <button class="btn btn-accent rounded-2xl">More <LucideArrowRight/></button>
+          <button class="btn bg-base-100 rounded-2xl text-white">More <LucideArrowRight/></button>
         </div>
        <div class="overflow-x-auto custom-scrollbar overflow-y-hidden pb-3">
         <div class="grid grid-flow-col grid-rows-2 gap-4" style="grid-auto-columns: 136px;">

@@ -1,15 +1,14 @@
 <template>
   <footer
     class="fixed bottom-0 left-0 right-0 mx-auto
-           w-full max-w-[500px]
+           w-full max-w-125
            bg-cover bg-no-repeat text-white shadow-xl
-           border-t border-blue-800/30 z-[55]"
-    :style="{ backgroundImage: bg('/static/webp/B6QWs8Dc.webp') }"
+           bg-base-100 z-55"
+   
   >
 
-    <!-- Ligne décorative -->
     <div
-      class="bg-contain bg-no-repeat w-full h-[4px] absolute bottom-[64px] bg-center"
+      class="bg-contain bg-repeat w-full h-1 absolute top-[-2px] bg-center"
       :style="{ backgroundImage: bg('/static/webp/B_MtXw-3.webp') }"
     ></div>
 
@@ -19,8 +18,8 @@
       <!-- 1 -->
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/sIofWxJ8.svg')"
-             class="h-[22px] mb-1 object-contain" />
-        <span class="text-[11px] font-bold text-[#698ed4] text-center">
+             class="h-5.5 mb-1 object-contain" />
+        <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('promotion') }}
         </span>
       </button>
@@ -29,7 +28,7 @@
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/D4seqzx_.svg')"
              class="h-[22px] mb-1 object-contain" />
-        <span class="text-[11px] font-bold text-[#698ed4] text-center">
+        <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('deposit') }}
         </span>
       </button>
@@ -38,9 +37,9 @@
       <button class="relative flex flex-col items-center justify-center">
         <img
           :src="asset('/static/webp/DftLpS0R.webp')"
-          class="w-[70px] absolute -top-6 left-1/2 -translate-x-1/2 z-10"
+          class="w-20 absolute -top-10 left-1/2 -translate-x-1/2 z-10"
         />
-        <span class="text-[11px] font-bold text-[#698ed4] mt-5 text-center">
+        <span class="text-[11px] font-bold text-gray-300  mt-5 text-center">
           {{ t('ranking') }}
         </span>
       </button>
@@ -49,7 +48,7 @@
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/DntYU2eA.svg')"
              class="h-[22px] mb-1 object-contain" />
-        <span class="text-[11px] font-bold text-[#698ed4] text-center">
+        <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('loot') }}
         </span>
       </button>
@@ -58,7 +57,7 @@
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/ChRMZLyf.svg')"
              class="h-[22px] mb-1 object-contain" />
-        <span class="text-[11px] font-bold text-[#698ed4] text-center">
+        <span class="text-[11px] font-bold text-gray-300 text-center">
           {{ t('personal') }}
         </span>
       </button>
