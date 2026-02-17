@@ -16,14 +16,14 @@
                      backdrop-blur-sm text-white shadow-xl 
                      border-b border-blue-800/30 
                      px-4 py-4 flex items-center justify-between bg-cover bg-no-repeat"
-                      :style="{backgroundImage: bg('/static/webp/OMR6_kmW.webp')}"
+                      :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
             
             >
               <img src="/asset/svg/logo.svg" alt="" class="w-[120px]" />
 
               <button
                 @click="handleClose"
-                class="p-2 bg-blue-800/50 rounded-xl hover:bg-blue-700/50 transition-all duration-200"
+                class="p-2 bg-base-100"
                 aria-label="Fermer"
               >
                 <img
