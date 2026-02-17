@@ -8,7 +8,7 @@
     />
   
     <!-- Rewards Section -->
-    <div class="px-3 mt-3">
+    <div class="px-3 my-3">
       <div class="flex justify-center items-center gap-3">
         <Rewards bg-image="/static/webp/sdfBvLKb.webp" />
         <Rewards bg-image="/static/webp/DMpFmNoL.webp" />
@@ -19,7 +19,7 @@
     <div class="relative">
 
       <!-- Sticky Buttons -->
-      <div class="sticky top-12 z-88  py-3 flex items-center justify-center gap-2  ">
+      <div class="sticky top-10 z-88  pt-5 flex items-center justify-center gap-2  ">
         <div class=" bg-base-100 flex w-full ">
             <RoundedButton
           v-for="(btn, index) in buttons"

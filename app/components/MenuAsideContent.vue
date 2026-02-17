@@ -37,7 +37,7 @@
     </button>
 
     <!-- Grid 3x3 -->
-    <div class="grid grid-cols-3 gap-3 text-white font-bold mb-14">
+    <div class="grid grid-cols-3 gap-3 text-white font-bold mb-14 ">
       <RoundedButton
         v-for="(btn, index) in buttons"
         :key="index"
@@ -60,7 +60,7 @@
                 <img
                   :src="item.icon"
                   :alt="item.title"
-                  class="w-6 h-6"
+                  class="w-7 h-7"
                   loading="eager"
                   decoding="async"
                 />
@@ -103,15 +103,17 @@
 const config = useRuntimeConfig();
 
 const buttons = [
+  { title: "Misterioso", image: "/static/webp/D9Vf61xP.webp" },
   { title: "Resgatar", image: "/static/webp/C7_SoLrK.webp" },
   { title: "Semana", image: "/static/webp/3TY0Tzzx.webp" },
-  { title: "Misterioso", image: "/static/webp/D9Vf61xP.webp" },
-  { title: "Check-in", image: "/static/webp/BzOmGKPn.webp" },
-  { title: "Roleta", image: "/static/webp/CHoWiKXg.webp" },
-  { title: "Roleta", image: "/static/webp/CHoWiKXg.webp" },
-  { title: "Check-in", image: "/static/webp/BzOmGKPn.webp" },
-  { title: "Misterioso", image: "/static/webp/D9Vf61xP.webp" },
-  { title: "Resgatar", image: "/static/webp/C7_SoLrK.webp" },
+
+  { title: "promotional", image: "/static/webp/Dze7L-r5.webp" },
+  { title: "vip", image: "/static/webp/CHoWiKXg.webp" },
+  { title: "Check-in", image: "/static/webp/Cym5nqRK.webp" },
+
+  { title: "roleta", image: "/static/webp/CHoWiKXg.webp" },
+  { title: "convite", image: "/static/webp/CD7ldDTn.webp" },
+  { title: "agente", image: "/static/webp/BCfm6EZt.webp" },
 ];
 
 const items = [
