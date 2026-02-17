@@ -4,7 +4,7 @@
            w-full max-w-125
            bg-cover bg-no-repeat text-white shadow-xl
            bg-base-100 z-55"
-   
+          :style="{ backgroundImage: `url('/asset/B6QWs8Dc.png')` }"
   >
 
     <div
