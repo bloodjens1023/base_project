@@ -2,7 +2,7 @@
   <div class="min-h-screen "  >
 
     <!-- default style bg-[#061237]  -->
-    <div class="w-full max-w-[500px] mx-auto flex flex-col min-h-screen bg-primary ">
+    <div class="w-full max-w-[500px] mx-auto flex flex-col min-h-screen bg-base-100 ">
 
       <!-- Header -->
       <TheHeader 

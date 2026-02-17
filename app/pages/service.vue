@@ -1,14 +1,13 @@
 <template>
-  <div
-    class="max-w-[500px] mx-auto min-h-screen bg-primary"
-  >
+  <div class="max-w-[500px] mx-auto min-h-screen bg-base-100">
     <HeaderService/>
     <div class="max-w-2xl mx-auto px-2 py-8">
-      <div v-if="!loading"
-        class="bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center border font-Montserrat-Regular border-blue-800/20"
+      <div
+        v-if="!loading"
+        class="bg-base-200/50 backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center border font-Montserrat-Regular border-base-300/20"
       >
-        <p class="text-white text-[14px] mt-2">
-          {{t('service_description')}}
+        <p class="text-base-content text-[14px] mt-2">
+          {{ t('service_description') }}
         </p>
       </div>
 
@@ -21,12 +20,12 @@
 
       <div
         v-else-if="error"
-        class="bg-red-500/10 border-l-4 border-red-500 p-4 rounded-xl backdrop-blur-sm"
+        class="bg-error/10 border-l-4 border-error p-4 rounded-xl backdrop-blur-sm"
       >
         <div class="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-red-400 mr-3"
+            class="h-6 w-6 text-error mr-3"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -38,7 +37,7 @@
               d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <span class="text-red-300">{{ error }}</span>
+          <span class="text-error-content">{{ error }}</span>
         </div>
       </div>
 
@@ -55,7 +54,6 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 const { t } = useI18n()
 import { ref, onMounted } from "vue-demi";
