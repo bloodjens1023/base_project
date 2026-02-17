@@ -5,7 +5,7 @@ import { useTheme } from '../../composables/useTheme'
 const { setTheme } = useTheme()
 
 const themes = [
-  { name: "synthwave", icon: Sun },
+  { name: "mytheme", icon: Sun },
   { name: "abyss", icon: Moon }
 ]
 
