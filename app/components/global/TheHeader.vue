@@ -103,7 +103,7 @@ const { theme, setTheme } = useTheme();
 
 const themes = [
   { name: "synthwave", icon: Moon },
-  { name: "abyss", icon: Star },
+  { name: "aqua", icon: Star },
 ];
 
 const currentTheme = ref<{ name: string; icon: unknown } | null>(null);
