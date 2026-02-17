@@ -1,7 +1,7 @@
 <template>
   <div
     class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125  text-white shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
-     :style="{ backgroundImage: bg('/static/webp/OMR6_kmW.webp') }"
+    :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
    
   >
     <!-- Decoration image -->
