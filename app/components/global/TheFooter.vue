@@ -8,7 +8,7 @@
   >
 
     <div
-      class="bg-contain bg-repeat w-full h-1 absolute top-[-2px] bg-center"
+      class="bg-contain bg-repeat w-full h-1 absolute -top-0.5 bg-center"
       :style="{ backgroundImage: bg('/static/webp/B_MtXw-3.webp') }"
     ></div>
 
@@ -27,7 +27,7 @@
       <!-- 2 -->
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/D4seqzx_.svg')"
-             class="h-[22px] mb-1 object-contain" />
+             class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('deposit') }}
         </span>
@@ -47,7 +47,7 @@
       <!-- 4 -->
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/DntYU2eA.svg')"
-             class="h-[22px] mb-1 object-contain" />
+             class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('loot') }}
         </span>
@@ -56,7 +56,7 @@
       <!-- 5 -->
       <button class="flex flex-col items-center justify-center">
         <img :src="asset('/static/svg/ChRMZLyf.svg')"
-             class="h-[22px] mb-1 object-contain" />
+             class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300 text-center">
           {{ t('personal') }}
         </span>

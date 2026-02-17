@@ -4,9 +4,9 @@
     <div class="max-w-2xl mx-auto px-2 py-8">
       <div
         v-if="!loading"
-        class="bg-base-200/50 backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center border font-Montserrat-Regular border-base-300/20"
+        class="bg-primary backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center  font-Montserrat-Regular"
       >
-        <p class="text-base-content text-[14px] mt-2">
+        <p class="text-gray-300 text-[14px] mt-2">
           {{ t('service_description') }}
         </p>
       </div>

@@ -2,7 +2,7 @@
   <button
     v-bind="$attrs"
     @click="openLink"
-    class="w-full bg-gradient-to-b from-[#bfea36] to-[#48bc49]  active:from-emerald-700 active:via-green-700 active:to-teal-700 text-black font-semibold py-3 px-6 rounded-2xl shadow-xl border border-emerald-400/30  "
+    class="w-full btn btn-accent active:from-emerald-700 active:via-green-700 active:to-teal-700 text-black font-semibold py-3 px-6 rounded-2xl shadow-xl border border-emerald-400/30  "
   >
     {{ title }}
   </button>

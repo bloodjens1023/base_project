@@ -1,7 +1,7 @@
 <template>
   <div
-    class="bg-linear-to-b from-[#162d77] to-[#1f4789] backdrop-blur-sm text-white shadow-xl border-b border-blue-800/30 bg-cover"
-    :style="{backgroundImage: bg('/static/webp/OMR6_kmW.webp')}"
+    class="bg-linear-to-b backdrop-blur-sm text-white shadow-xl border-b border-blue-800/30 bg-cover"
+       :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
   >
     <!-- Decoration bottom-right -->
     <div
@@ -14,7 +14,7 @@
     <div class="px-4 py-4 flex items-center max-w-3xl mx-auto w-full">
       <NuxtLink to="/">
         <button
-          class="mr-4 p-2 bg-blue-800/50 rounded-xl transition-all duration-200 "
+          class="mr-4 p-2 btn btn-primary rounded-xl transition-all duration-200 "
           aria-label="Back"
         >
           <img
@@ -25,7 +25,7 @@
         </button>
       </NuxtLink>
 
-      <div class="flex-1 flex items-center justify-center gap-2">
+      <div class="flex-1 flex items-center justify-center gap-2 ">
         <img
           :src="asset('/static/svg/DrVQ8Lpq.svg')" 
   

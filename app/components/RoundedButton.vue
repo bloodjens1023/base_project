@@ -7,7 +7,7 @@
     <div class="flex flex-col gap-1">
         <img :src="bgImage"  alt="" class="h-12.5 w-12.5 mt-2">
       </div>
-      <div class="mt-4 text-[12px] font-bold"><p>{{ title }}</p></div>
+      <div class="mt-4 mb-2 text-[12px] font-bold"><p>{{ title }}</p></div>
   </div>
   
 </template>
