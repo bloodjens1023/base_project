@@ -1,11 +1,11 @@
 <template>
   <div
-    class="bg-gradient-to-b from-[#162d77] to-[#1f4789] backdrop-blur-sm text-white shadow-xl border-b border-blue-800/30 bg-cover"
+    class="bg-linear-to-b from-[#162d77] to-[#1f4789] backdrop-blur-sm text-white shadow-xl border-b border-blue-800/30 bg-cover"
     :style="{backgroundImage: bg('/static/webp/OMR6_kmW.webp')}"
   >
     <!-- Decoration bottom-right -->
     <div
-      class="bg-contain h-[68px] w-[95px] absolute z-[0] bottom-[-30px] right-[0px]"
+      class="bg-contain h-17 w-23.75 absolute z-0 -bottom-7.5 right-0"
 
       :style="{backgroundImage: bg('/static/webp/DnbsAF0P.webp')}"
     ></div>
@@ -14,7 +14,7 @@
     <div class="px-4 py-4 flex items-center max-w-3xl mx-auto w-full">
       <NuxtLink to="/">
         <button
-          class="mr-4 p-2 bg-blue-800/50 rounded-xl transition-all duration-200 w-30"
+          class="mr-4 p-2 bg-blue-800/50 rounded-xl transition-all duration-200 "
           aria-label="Back"
         >
           <img

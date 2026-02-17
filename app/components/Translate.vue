@@ -1,24 +1,44 @@
 <template>
-  <div class="">
-    <button
-      class="px-2 py-1 bg-blue-600 hover:bg-blue-700 transition text-white rounded-lg"
-      @click="toggleLanguage"
+  <div
+        class="w-full flex justify-between items-center py-[0.4rem] px-3 btn rounded-lg border-none"
+        @click="open = !open"
+        >
+        <div class="flex gap-5">
+          <LucideLanguages/>
+        LANGUAGE ({{ currentLabel }})
+         <div
+      v-if="open"
+      class="absolute left-3 mt-8 w-80 bg-white border border-gray-200 rounded-md shadow-lg z-10"
     >
-      {{ currentLabel }}
-    </button>
+      <button
+        @click="setLocale('en'); open = false"
+        class="block w-full text-left px-4 py-2 text-sm  text-gray-700 hover:bg-blue-100 transition"
+      >
+        US English
+      </button>
+      <button
+        @click="setLocale('pt-br'); open = false"
+        class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 transition"
+      >
+        BR Português
+      </button>
+    </div>
   </div>
+        </div>
+        <div class="relative inline-block text-left">
+   
+        
+      </div>
+  
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 
+const open = ref(false)
 const { locale, setLocale } = useI18n()
 
-function toggleLanguage() {
-  setLocale(locale.value === 'en' ? 'pt-br' : 'en')
-}
-
 const currentLabel = computed(() =>
-  locale.value === 'en' ? 'BR' : 'US'
+  locale.value === 'en' ? 'EN' : 'BR'
 )
 </script>

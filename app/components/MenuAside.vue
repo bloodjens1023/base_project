@@ -1,7 +1,7 @@
 <template>
   <teleport to="body">
     <transition name="slide">
-      <div v-if="isOpen" class="fixed inset-0 z-[99]" @click="handleClose">
+      <div v-if="isOpen" class="fixed inset-0 z-99" @click="handleClose">
         <div class="absolute inset-0 bg-black/50"></div>
 
         <div class="max-w-[500px] mx-auto h-full relative">
@@ -15,7 +15,8 @@
                       theme-bg
                      backdrop-blur-sm text-white shadow-xl 
                      border-b border-blue-800/30 
-                     px-4 py-4 flex items-center justify-between"
+                     px-4 py-4 flex items-center justify-between bg-cover bg-no-repeat"
+                      :style="{backgroundImage: bg('/static/webp/OMR6_kmW.webp')}"
             
             >
               <img src="/asset/svg/logo.svg" alt="" class="w-[120px]" />

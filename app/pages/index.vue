@@ -7,7 +7,6 @@
       alt=""
     />
   
-<button class="btn btn-primary">Button</button>
     <!-- Rewards Section -->
     <div class="px-3 mt-3">
       <div class="flex justify-center items-center gap-3">
@@ -21,7 +20,7 @@
 
       <!-- Sticky Buttons -->
       <div class="sticky top-12 z-88  py-3 flex items-center justify-center gap-2  ">
-        <div class="bg-primary flex w-full">
+        <div class=" bg-base-100 flex w-full">
             <RoundedButton
           v-for="(btn, index) in buttons"
           :key="index"

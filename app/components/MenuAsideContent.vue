@@ -1,11 +1,12 @@
 <template>
   <div class="p-3">
-    <div class="w-full flex flex-col gap-2">
+    <div class="w-full flex flex-col gap-2"       >
       <div
         v-for="(item, index) in items"
         :key="index"
-        class="w-full flex justify-between items-center py-[0.4rem] px-3 bg-[#15194c] btn rounded-lg border-none"
-      >
+        class="w-full flex justify-between items-center py-[0.4rem] px-3  btn rounded-lg border-none"
+        
+        >
         <!-- Left item -->
         
         <div class="flex items-center gap-3">
@@ -23,22 +24,9 @@
           </span>
         </div>
 
-        <!-- Right SVG -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-6  rounded-md p-1 "
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+        <LucideArrowRight/>
       </div>
+        <Translate/>
     </div>
    
     <!-- Bouton principal -->
@@ -104,20 +92,7 @@
        
 
         <!-- Right SVG -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-6 text-blue-400/80 btn rounded-md p-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+        <LucideArrowRight/>
       </div>
     </div>
   </div>

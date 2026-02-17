@@ -8,10 +8,10 @@
     </div>
 
     <div
-      class="w-full flex flex-row justify-center gap-[10px] rounded-lg mt-6"
+      class="w-full flex flex-row justify-center gap-2.5 rounded-lg mt-6"
     >
       <div
-        class="flex flex-row justify-center items-center rounded-lg bg-gradient-to-b from-[#162d77] to-[#1f4789] px-4 py-2 gap-2"
+        class="flex flex-row justify-center items-center rounded-lg bg-linear-to-b from-[#162d77] to-[#1f4789] px-4 py-2 gap-2"
       >
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/kN_fe_Gl.svg"
@@ -30,55 +30,55 @@
     </p>
 
     <!-- list icons -->
-    <div class="share flex w-full gap-[10px] justify-center mt-6">
-      <div class="share-icon w-[60px] h-[60px] rounded-lg flex justify-center items-center">
+    <div class="share flex w-full gap-2.5 justify-center mt-6">
+      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/BpjPtDpL.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          class="h-[45px]"
+          class="h-11.25"
         />
       </div>
-      <div class="share-icon w-[60px] h-[60px] rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/kN_fe_Gl.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          class="h-[45px] logo"
+          class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-[60px] h-[60px] rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/B_Gx7ck-.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          class="h-[45px] logo"
+          class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-[60px] h-[60px] rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/URMDl3hM.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          class="h-[45px] logo"
+          class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-[60px] h-[60px] rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
         <img
           src="https://downpg117.uqianbao.com/source/public/static/svg/oMuAMAQ6.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
           decoding="async"
-          class="h-[45px] logo"
+          class="h-11.25 logo"
         />
       </div>
     </div>
@@ -142,7 +142,7 @@
 
     <!-- Title image -->
     <div
-      class="w-full flex flex-row justify-between items-center gap-[8px] px-6 mt-14" 
+      class="w-full flex flex-row justify-between items-center gap-2 px-6 mt-14" 
     >
       <img
         src="https://downpg117.uqianbao.com/source/public/static/webp/CbkHlecm.webp"
@@ -150,7 +150,7 @@
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        class="h-[30px] aspect-[4.45/1]"
+        class="h-7.5 aspect-[4.45/1]"
         
       />
       <img
@@ -159,7 +159,7 @@
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        class="h-[30px] aspect-[3.5/1]"
+        class="h-7.5 aspect-[3.5/1]"
         
       />
       <img
@@ -168,16 +168,16 @@
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        class="h-[30px] aspect-[3.04/1]"
+        class="h-7.5 aspect-[3.04/1]"
       />
     </div>
 
     <!-- Desc -->
     <div class="Contact w-full flex flex-col text-[12px] px-8 mt-6 font-bold">
-      <div class="company-introduction leading-[16px] break-all">
+      <div class="company-introduction leading-4 break-all">
         {{ t('legalNotice') }}
       </div>
-      <div class="company-introduction leading-[16px] mt-[10px]">
+      <div class="company-introduction leading-4 mt-2.5">
         <p> {{ t('disclaimer1') }}</p>
         <p> {{ t('disclaimer2') }}</p>
         <p> {{ t('disclaimer3') }}</p>
@@ -271,16 +271,13 @@
     </div>
 
     <!-- Back to Top Button -->
-    <div class="w-full flex justify-center items-start mt-16 h-[300px] cursor-pointer" @click="scrollToTop" >
+    <div class="w-full flex justify-center items-start mt-16 h-75 cursor-pointer" @click="scrollToTop" >
       <div class="el-backtop" style="right: 40px; bottom: 40px">
         <div
-          class="flex flex-col justify-center items-center text-center  h-full"
+          class="flex flex-col justify-center items-center text-center  h-10 btn rounded-full"
         >
-          <img
-            src="https://downpg117.uqianbao.com/source/public/static/svg/DSrEP2nO.svg"
-            alt="Back to top"
-            class="w-[120px] rounded-lg "
-          />
+          <LucideArrowUp/>
+          
         </div>
       </div>
     </div>

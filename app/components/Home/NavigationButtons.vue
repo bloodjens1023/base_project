@@ -83,13 +83,11 @@ onUnmounted(() => observer?.disconnect())
       :class="[
         'tabs-item px-6 py-2 rounded-lg cursor-pointer transition-all duration-200 flex items-center gap-2 min-w-fit whitespace-nowrap',
         tab.active
-          ? 'font-bold bg-gradient-to-b from-[#bfea36] to-[#48bc49] text-black shadow-lg scale-105'
+          ? 'font-bold bg-linear-to-b from-[#bfea36] to-[#48bc49] text-black shadow-lg scale-105'
           : 'font-semibold bg-[#15194c] text-gray-300 hover:from-[#252d6b] hover:to-[#1a2148] hover:text-white hover:scale-105'
       ]"
     >
-      <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-        <path v-html="tab.icon"></path>
-      </svg>
+      <LucideFlame v-if="tab.name==='PG'"/>
       <span class="text-sm">{{ tab.name }}</span>
       
     </div>

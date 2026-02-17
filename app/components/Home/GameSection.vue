@@ -54,7 +54,7 @@ onMounted(async () => {
     v-if="!loading"
   />
 
-  <div class="max-w-[500px] mx-auto px-5 mb-24">
+  <div class="max-w-125 mx-auto px-5 mb-24">
     <!-- Loading -->
     <div v-if="loading" class="text-center py-8 text-white">
         <Loading/>
@@ -73,18 +73,20 @@ onMounted(async () => {
         :id="`platform-${platform}`"
         class="mb-8 mt-5"
       >
-        <h2 class="text-xl font-bold  mb-3 px-2" :style="{ color: 'var(--text)' }">
-          {{ platform }}
-        </h2>
-
+        <div class="flex justify-between items-center mb-2">
+          <h2 class="text-xl font-bold  mb-3 px-2" :style="{ color: 'var(--text)' }">
+            {{ platform }}
+          </h2>
+          <button class="btn btn-accent rounded-2xl">More <LucideArrowRight/></button>
+        </div>
        <div class="overflow-x-auto custom-scrollbar overflow-y-hidden pb-3">
         <div class="grid grid-flow-col grid-rows-2 gap-4" style="grid-auto-columns: 136px;">
             <div 
             v-for="game in groupedGames[platform]" 
             :key="game.unId" 
-            class="flex flex-col items-center w-[136px]"
+            class="flex flex-col items-center w-34"
             >
-            <div class="relative w-[136px] h-[136px] rounded-lg overflow-hidden flex-shrink-0">
+            <div class="relative w-34 h-34 rounded-lg overflow-hidden shrink-0">
                 
                 <img
                 :src="game.gameImg"
