@@ -83,7 +83,7 @@ onUnmounted(() => observer?.disconnect())
       :class="[
         'tabs-item px-6 py-2 rounded-lg cursor-pointer transition-all duration-200 flex items-center gap-2 min-w-fit whitespace-nowrap',
         tab.active
-          ? 'font-bold btn btn-secondary shadow-lg scale-105'
+          ? 'font-bold btn btn-secondary shadow-lg scale-105 text-gray-950'
           : 'font-semibold btn btn-primary'
       ]"
     >

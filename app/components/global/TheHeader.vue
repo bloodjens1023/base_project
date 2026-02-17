@@ -1,7 +1,8 @@
 <template>
   <div
-    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125  text-white shadow-xl border-b bg-cover overscroll-none z-90 theme-bg"
-    :style="{ backgroundImage: bg('/static/webp/OMR6_kmW.webp') }"
+    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125  text-white shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
+     :style="{ backgroundImage: bg('/static/webp/OMR6_kmW.webp') }"
+   
   >
     <!-- Decoration image -->
     <div
@@ -37,7 +38,7 @@
         <button
           v-if="currentIcon"
           @click="toggleTheme"
-          class="p-2 rounded-full bg-secondary "
+          class="p-2 rounded-full bg-base-100"
         >
           <component :is="currentIcon" class="w-5 h-5" />
         </button>
@@ -102,8 +103,8 @@ const closeMenu = () => {
 const { theme, setTheme } = useTheme();
 
 const themes = [
-  { name: "synthwave", icon: Moon },
-  { name: "mytheme", icon: Star },
+  { name: "mytheme", icon: Moon },
+  { name: "mytheme2", icon: Star },
 ];
 
 const currentTheme = ref<{ name: string; icon: unknown } | null>(null);
