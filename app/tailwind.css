@@ -1,10 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes:
-    light,
-    night,
-    dark,
     synthwave,
-    abyss,
-    retro
+    night,
+    abyss
 }

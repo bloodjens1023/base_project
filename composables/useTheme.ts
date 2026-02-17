@@ -1,5 +1,5 @@
 export const useTheme = () => {
-  const theme = useState<string>('theme', () => 'light')
+  const theme = useState<string>('theme', () => 'synthwave')
 
   const setTheme = (newTheme: string) => {
     theme.value = newTheme

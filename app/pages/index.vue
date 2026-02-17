@@ -58,6 +58,4 @@ const buttons = computed(() => [
   { title: t('roulette'), image: '/static/webp/CHoWiKXg.webp' },
 ])
 
-
-
 </script>

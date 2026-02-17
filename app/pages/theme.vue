@@ -1,28 +1,29 @@
 <script setup>
+import { Sun, Moon } from "lucide-vue-next";
 import { useTheme } from '../../composables/useTheme'
 
-const { theme, setTheme } = useTheme()
+const { setTheme } = useTheme()
 
 const themes = [
-  { name: "light",     label: "Light" },
-  { name: "night",     label: "Night" },
-  { name: "dark",      label: "Dark" },
-  { name: "synthwave", label: "Synthwave" },
-  { name: "abyss",     label: "Abyss" },
-  { name: "retro",     label: "Retro" },
+  { name: "synthwave", icon: Sun },
+  { name: "abyss", icon: Moon }
 ]
+
+const selectTheme = (name) => {
+  setTheme(name)
+}
 </script>
 
 <template>
-  <div class="p-4">
-    <select
-      class="select select-bordered w-full max-w-xs"
-      :value="theme"
-      @change="setTheme($event.target.value)"
+  <div class="flex gap-4 p-4">
+    <button
+      v-for="t in themes"
+      :key="t.name"
+      @click="selectTheme(t.name)"
+      class="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
     >
-      <option v-for="t in themes" :key="t.name" :value="t.name">
-        {{ t.label }}
-      </option>
-    </select>
+      <component :is="t.icon" class="w-6 h-6"/>
+    </button>
   </div>
+  
 </template>
