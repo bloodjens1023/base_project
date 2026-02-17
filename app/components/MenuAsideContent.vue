@@ -117,30 +117,30 @@ const buttons = [
 const items = [
   {
     title: "Depósito",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/vBJGo5rR.svg",
+    icon: "/asset/svg/vBJGo5rR.svg",
   },
   {
     title: "Saque",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/vBJGo5rR.svg",
+    icon: "/asset/svg/C5Bsfa3w.svg",
   },
   {
     title: "Código De Bônus",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/vBJGo5rR.svg",
+    icon: "/asset/svg/B8B01DZ6.svg",
   },
 ];
 
 const items2 = [
   {
     title: "Mensagem",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/IWi2FDed.svg",
+    icon: "/asset/svg/IWi2FDed.svg",
   },
   {
     title: "Adiconar à tela inicial",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/CcaUXxLJ.svg",
+    icon: "/asset/svg/CcaUXxLJ.svg",
   },
   {
     title: "Suporte ao vivo",
-    icon: "https://downpg117.uqianbao.com/source/public/static/svg/DrVQ8Lpq.svg",
+    icon: "/asset/svg/DrVQ8Lpq.svg",
   },
 ];
 </script>

@@ -23,7 +23,7 @@
 
               <button
                 @click="handleClose"
-                class="p-2 bg-base-100"
+                class="p-2 bg-base-100 cursor-pointer"
                 aria-label="Fermer"
               >
                 <img

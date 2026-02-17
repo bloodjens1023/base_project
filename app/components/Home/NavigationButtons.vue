@@ -116,16 +116,16 @@ onUnmounted(() => observer?.disconnect())
   background: transparent; /* fond transparent ou couleur douce */
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #4a5568; /* couleur du curseur */
+  background-color: #ffff; /* couleur du curseur */
   border-radius: 3px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #718096; /* couleur au hover */
+  background-color: #ffff; /* couleur au hover */
 }
 
 /* Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #4a5568 transparent;
+  scrollbar-color: #ffff transparent;
 }
 </style>
