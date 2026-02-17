@@ -11,10 +11,10 @@
       class="w-full flex flex-row justify-center gap-2.5 rounded-lg mt-6"
     >
       <div
-        class="flex flex-row justify-center items-center rounded-lg bg-linear-to-b from-[#162d77] to-[#1f4789] px-4 py-2 gap-2"
+        class="flex flex-row justify-center items-center rounded-lg bg-primary px-4 py-2 gap-2"
       >
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/kN_fe_Gl.svg"
+          src="/asset/svg/kN_fe_Gl.svg"
           alt="Telegram Icon"
           loading="eager"
           fetchpriority="high"
@@ -31,9 +31,9 @@
 
     <!-- list icons -->
     <div class="share flex w-full gap-2.5 justify-center mt-6">
-      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-full flex justify-center items-center bg-primary">
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/BpjPtDpL.svg"
+          src="/asset/svg/BpjPtDpL.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
@@ -41,9 +41,9 @@
           class="h-11.25"
         />
       </div>
-      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-full flex justify-center items-center  bg-primary">
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/kN_fe_Gl.svg"
+          src="/asset/svg/kN_fe_Gl.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
@@ -51,9 +51,9 @@
           class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-full flex justify-center items-center  bg-primary">
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/B_Gx7ck-.svg"
+          src="/asset/svg/B_Gx7ck.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
@@ -61,9 +61,9 @@
           class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-full flex justify-center items-center  bg-primary">
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/URMDl3hM.svg"
+          src="/asset/svg/URMDl3hM.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
@@ -71,9 +71,9 @@
           class="h-11.25 logo"
         />
       </div>
-      <div class="share-icon w-15 h-15 rounded-lg flex justify-center items-center">
+      <div class="share-icon w-15 h-15 rounded-full flex justify-center items-center  bg-primary">
         <img
-          src="https://downpg117.uqianbao.com/source/public/static/svg/oMuAMAQ6.svg"
+          src="/asset/svg/oMuAMAQ6.svg"
           alt=""
           loading="eager"
           fetchpriority="high"
@@ -274,7 +274,7 @@
     <div class="w-full flex justify-center items-start mt-16 h-75 cursor-pointer" @click="scrollToTop" >
       <div class="el-backtop" style="right: 40px; bottom: 40px">
         <div
-          class="flex flex-col justify-center items-center text-center  h-10 btn rounded-full"
+          class="flex flex-col justify-center items-center text-center  h-10 btn btn-primary rounded-full"
         >
           <LucideArrowUp/>
           

@@ -17,7 +17,7 @@
 
       <!-- 1 -->
       <button class="flex flex-col items-center justify-center">
-        <img :src="asset('/static/svg/sIofWxJ8.svg')"
+        <img src="/asset/svg/sIofWxJ8.svg"
              class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('promotion') }}
@@ -26,7 +26,7 @@
 
       <!-- 2 -->
       <button class="flex flex-col items-center justify-center">
-        <img :src="asset('/static/svg/D4seqzx_.svg')"
+        <img src="/asset/svg/D4seqzx_.svg"
              class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('deposit') }}
@@ -46,7 +46,7 @@
 
       <!-- 4 -->
       <button class="flex flex-col items-center justify-center">
-        <img :src="asset('/static/svg/DntYU2eA.svg')"
+        <img src="/asset/svg/DntYU2eA.svg"
              class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300  text-center">
           {{ t('loot') }}
@@ -55,7 +55,7 @@
 
       <!-- 5 -->
       <button class="flex flex-col items-center justify-center">
-        <img :src="asset('/static/svg/ChRMZLyf.svg')"
+        <img src="/asset/svg/ChRMZLyf.svg"
              class="h-5.5 mb-1 object-contain" />
         <span class="text-[11px] font-bold text-gray-300 text-center">
           {{ t('personal') }}

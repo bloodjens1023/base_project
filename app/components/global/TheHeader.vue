@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125  text-white shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
+    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125   shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
     :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
    
   >
@@ -29,7 +29,7 @@
       <img
         src="/asset/svg/logo.svg"
         alt="logo"
-        class="w-[100px] sm:w-[120px] object-contain"
+        class="w-[100px] sm:w-[120px] object-contain "
       />
 
       <div class="ml-28">
@@ -38,7 +38,7 @@
         <button
           v-if="currentIcon"
           @click="toggleTheme"
-          class="p-2 rounded-full bg-base-100"
+          class="p-2 rounded-full bg-base-100 text-white"
         >
           <component :is="currentIcon" class="w-5 h-5" />
         </button>
@@ -55,7 +55,7 @@
 
       <!-- RIGHT SIDE -->
       <div class="flex-1 flex justify-end items-center gap-2 min-w-0">
-        <button class="px-3 py-1 text-sm font-semibold whitespace-nowrap">
+        <button class="px-3 py-1 text-sm font-semibold whitespace-nowrap text-white">
           {{ t("enter") }}
         </button>
 
@@ -81,7 +81,7 @@
 import { ref, onMounted } from "vue";
 import TheMenuAside from "../MenuAside.vue";
 import Translate from "../Translate.vue";
-import { Star, Moon } from "lucide-vue-next";
+import { Star, Moon, Sun } from "lucide-vue-next";
 import { useTheme } from "../../../composables/useTheme";
 
 const { t } = useI18n();
@@ -104,7 +104,7 @@ const { theme, setTheme } = useTheme();
 
 const themes = [
   { name: "mytheme", icon: Moon },
-  { name: "mytheme2", icon: Star },
+  { name: "mytheme2", icon: Sun },
 ];
 
 const currentTheme = ref<{ name: string; icon: unknown } | null>(null);
