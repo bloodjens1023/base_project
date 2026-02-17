@@ -1,8 +1,7 @@
 <template>
   <div
-    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125   shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
+    class="fixed top-0 left-0 right-0 mx-auto w-full max-w-125 shadow-xl border-b bg-cover overscroll-none z-90 bg-primary"
     :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
-   
   >
     <!-- Decoration image -->
     <div
@@ -29,11 +28,10 @@
       <img
         src="/asset/svg/logo.svg"
         alt="logo"
-        class="w-[100px] sm:w-[120px] object-contain "
+        class="w-[100px] sm:w-[120px] object-contain"
       />
 
       <div class="ml-28">
-
         <!-- Si currentIcon est défini -->
         <button
           v-if="currentIcon"
@@ -48,21 +46,25 @@
           v-else
           @click="toggleTheme"
           class="p-2 rounded-full bg-base-100 w-8 h-8"
-        >
-          
-        </button>
+        ></button>
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="flex-1 flex justify-end items-center gap-2 min-w-0">
-        <button class="px-3 py-1 text-sm font-semibold whitespace-nowrap text-white">
-          {{ t("enter") }}
+        <button
+          class="px-3 py-1 text-sm font-semibold whitespace-nowrap text-white"
+        >
+          <NuxtLink to="/login">
+            {{ t("enter") }}
+          </NuxtLink>
         </button>
 
         <button
-          class="btn btn-accent  rounded-xl text-black px-3  text-sm font-semibold whitespace-nowrap"
+          class="btn btn-accent rounded-xl text-black px-3 text-sm font-semibold whitespace-nowrap"
         >
-          {{ t("register") }}
+          <NuxtLink to="/login">
+            {{ t("register") }}
+          </NuxtLink>
         </button>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-[500px] mx-auto min-h-screen bg-base-100">
-    <HeaderService/>
+    <HeaderGlobal title="Service"/>
     <div class="max-w-2xl mx-auto px-2 py-8">
       <div
         v-if="!loading"
@@ -57,7 +57,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 import { ref, onMounted } from "vue-demi";
-import HeaderService from "~/components/HeaderService.vue";
+import HeaderGlobal from "~/components/HeaderGlobal.vue";
 import ServiceButton from "~/components/ServiceButton.vue";
 
 const buttons = ref<{ title: string; url: string }[]>([]);
