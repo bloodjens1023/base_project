@@ -2,26 +2,9 @@
 export default defineEventHandler(async () => {
   const API_BASE = 'https://eg-cf.wdang.vip'
 
-  // Extraction des enfants EGAME
-    const extractEGames = (data: any): any[] => {
-      if (!data) return []
-      const list = Array.isArray(data) ? data : data.data || []
-      if (!Array.isArray(list)) return []
-
-      const result: any[] = []
-      list.forEach((parent: any) => {
-        if (parent && Array.isArray(parent.childrenList)) {
-          parent.childrenList.forEach((child: any) => {
-            if (child && child.gameType === 'EGAME') {
-              result.push(child)
-            }
-          })
-        }
-      })
-      return result
-    }
-
   try {
+    console.log('📡 Appel API gameBarNew...')
+    
     const res = await $fetch(`${API_BASE}/api/game/gameBarNew`, {
       method: 'GET',
       query: {
@@ -33,10 +16,43 @@ export default defineEventHandler(async () => {
       }
     })
 
-    // Extraire uniquement les enfants EGAME
-    const games = extractEGames(res as any[])
-    return games
+    // Log pour debug
+    console.log('✅ API répondue avec succès')
+
+    // Déterminer le format de la réponse
+    const categories = Array.isArray(res) ? res : (res as any).data || []
+    
+    console.log(`📊 ${categories.length} catégories trouvées`)
+
+    // Extraire les données voulues
+    const result = categories.map((category: any) => {
+      const gameCount = category.childrenList?.length || 0
+      console.log(`   - ${category.name}: ${gameCount} jeux`)
+      
+      return {
+        name: category.name,
+        barLogo: category.barImgUrl,
+        children: (category.childrenList || []).map((child: any) => ({
+          name: child.name,
+          gameImg: child.gameImg,
+          playCode: child.playCode,
+          platformCode: child.platformCode
+        }))
+      }
+    })
+
+    return {
+      success: true,
+      count: result.length,
+      data: result
+    }
+
   } catch (err) {
-    return { error: (err as any).message || 'API failed' }
+    console.error('❌ Erreur API:', err)
+    return { 
+      success: false, 
+      error: (err as any).message || 'API failed',
+      data: [] 
+    }
   }
 })

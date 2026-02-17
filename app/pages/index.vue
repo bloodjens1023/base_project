@@ -15,6 +15,10 @@
       </div>
     </div>
 
+    
+    
+
+
     <!-- Wrapper Sticky + GameSection -->
     <div class="relative">
 
@@ -35,6 +39,7 @@
       <GameSection />
 
     </div>
+
 
     <!-- Bottom -->
     <BottomSection />
