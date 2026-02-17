@@ -94,12 +94,16 @@ onUnmounted(() => observer?.disconnect())
       
     </div>
   </div>
-   <input
-      type="text"
+  <div class="bg-[#15194c] flex items-center justify-center p-1 rounded-lg">
+    <LucideSearch size="30" stroke-width="2"/>
+    <input
+        type="text"
+      
+        placeholder="Buscar"
+        class="w-auto px-5 py-2 max-w-25 h-[50%]  rounded-xl border-none outline-none text-blue-400 placeholder-blue-400 flex-1"
+      />
+  </div>
     
-      placeholder="Buscar"
-      class="w-auto px-2 py-2 max-w-[100px] h-[45px] bg-[#15194c] rounded-xl border-none outline-none text-blue-400 placeholder-blue-400 flex-1"
-    />
   </div>
  
   
