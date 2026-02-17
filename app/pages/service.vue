@@ -1,12 +1,12 @@
 <template>
   <div class="max-w-[500px] mx-auto min-h-screen bg-base-100">
     <HeaderGlobal title="Service"/>
-    <div class="max-w-2xl mx-auto px-2 py-8">
+    <div class="max-w-2xl mx-auto px-2 pt-24">
       <div
         v-if="!loading"
         class="bg-primary backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center  font-Montserrat-Regular"
       >
-        <p class="text-gray-300 text-[14px] mt-2">
+        <p class="text-gray-300 text-[14px]">
           {{ t('service_description') }}
         </p>
       </div>
