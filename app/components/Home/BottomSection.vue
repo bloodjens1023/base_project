@@ -105,10 +105,10 @@
     </div>
 
     <!-- Back To Top -->
-    <div class="flex justify-center mt-16 pb-16">
+    <div class="flex justify-center mt-16 h-100">
       <button
         @click="scrollToTop"
-        class="h-10 w-10 btn btn-primary rounded-full flex items-center justify-center"
+        class="h-20 w-20 btn btn-primary rounded-full flex items-center justify-center"
         :aria-label="t('backToTop')"
       >
         <LucideArrowUp />
