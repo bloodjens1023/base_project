@@ -22,12 +22,10 @@ export default defineEventHandler(async () => {
     // Déterminer le format de la réponse
     const categories = Array.isArray(res) ? res : (res as any).data || []
     
-    console.log(`📊 ${categories.length} catégories trouvées`)
-
     // Extraire les données voulues
     const result = categories.map((category: any) => {
       const gameCount = category.childrenList?.length || 0
-      console.log(`   - ${category.name}: ${gameCount} jeux`)
+   
       
       return {
         name: category.name,

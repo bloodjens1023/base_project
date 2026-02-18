@@ -24,7 +24,7 @@
 
       <!-- Sticky Buttons -->
       <div class="sticky top-10 z-88  pt-5 flex items-center justify-center gap-2  ">
-        <div class=" bg-base-100 flex w-full ">
+        <div class=" bg-base-100 backdrop-blur-sm flex w-full ">
             <RoundedButton
           v-for="(btn, index) in buttons"
           :key="index"
@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+  const { t } = useI18n()
   import BottomSection from '../components/Home/BottomSection.vue';
   import AnimationsNum from '../components/Home/AnimationsNum.vue';
   import GameSection from '~/components/Home/GameSection.vue';

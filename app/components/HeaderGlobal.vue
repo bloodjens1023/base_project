@@ -21,7 +21,7 @@
       </NuxtLink>
 
       <div class="flex-1 flex items-center justify-center">
-        <h1 class="text-lg font-bold text-white">{{ title }}</h1>
+        <h1 class="text-lg font-bold text-white">{{ t(title) }}</h1>
       </div>
 
       <div class="absolute left-[89%]">
@@ -40,7 +40,7 @@
 
     <!-- Bottom border -->
     <div
-      class="bg-contain w-full h-[4px] absolute z-[0] bottom-[-2px] bg-center"
+      class="bg-contain w-full h-1 absolute z-0 -bottom-0.5 bg-center"
       :style="{ backgroundImage: bg('/static/webp/B_MtXw-3.webp') }"
     ></div>
   </div>

@@ -27,5 +27,60 @@
   "week": "Semana",
   "mysterious": "Misterioso",
   "checkin": "Check-in",
-  "roulette": "Roleta"
+  "roulette": "Roleta",
+  
+  "withdrawal_message": "{phone} acabou de retirar {amount} R$",
+    "telegram": "Telegramma",
+  "contactEmail": "Contato: {email}",
+  "socialMedia": "Rede social",
+  "certification": "Certificação",
+  "paymentMethod": "Método de pagamento",
+  "updateTime": "Atualizado em: {time}",
+  "backToTop": "Voltar ao topo",
+  "common": {
+    "more": "Mais",
+      "search": "Buscar"
+  },
+  "games": {
+    "label": "jogos",
+    "demo": "Demo",
+    "empty": "Nenhuma categoria disponível"
+  },
+  "errors": {
+    "gamesLoad": "Não foi possível carregar os jogos."
+  },
+  "Login":"Entrar",
+  "Ganhe R$100 de graça": "Ganhe R$100 de graça",
+  "Misterioso": "Misterioso",
+  "Resgatar": "Resgatar",
+  "Semana": "Semana",
+  "promotional": "Promocional",
+  "vip": "VIP",
+  "Check-in": "Check-in",
+  "roleta": "Roleta",
+  "convite": "Convite",
+  "agente": "Agente",
+  "Depósito": "Depósito",
+  "Saque": "Saque",
+  "Código De Bônus": "Código de Bônus",
+  "Mensagem": "Mensagem",
+  "Adiconar à tela inicial": "Adicionar à tela inicial",
+  "Suporte ao vivo": "Suporte ao vivo",
+  
+  "your_number": "Seu número",
+  "enter_password": "Digite sua senha",
+  "remember_password": "Lembrar a senha",
+
+  "success_entered": "✓ Entrado!",
+  "no_account": "Não tem conta?",
+  "welcome_to": "Bem-vindo ao",
+  "gaming_experience": "Proporcionar a você uma experiência de jogo sem precedentes",
+  
+
+
+  "login": "Entrar",
+  "register_bonus": "Registrar +R$ 3 ~ 77",
+  "success_registered": "✓ Cadastrado!",
+  "accept_terms": "Eu aceito todas as Políticas e Privacidade e confirmo que tenho pelo menos 18 anos",
+  "already_account": "Jà tem conta?"
 }

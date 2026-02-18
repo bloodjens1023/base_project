@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted, watch } from 'vue'
-
+const { t } = useI18n() // Hook i18n
 const props = defineProps<{
   groupedGames?: Record<string, any> | null
 }>()
@@ -61,12 +61,12 @@ onUnmounted(() => observer?.disconnect())
     <!-- Tabs -->
     <div class="flex gap-2 overflow-x-auto sticky top-0 z-10 py-2 custom-scrollbar">
       <div
-        v-for="category in groupedGames"
+        v-for="(category, index) in groupedGames"
         :key="category.name"
          @click="$emit('scroll-to', category.name)"
         :class="[
           'px-6 py-2 rounded-lg cursor-pointer transition-all duration-200 flex items-center gap-2 min-w-fit whitespace-nowrap',
-          activeTab === index
+          activeTab === parseInt(index)
             ? 'font-bold btn btn-secondary shadow-lg scale-105 text-gray-950'
             : 'font-semibold btn btn-primary'
         ]"
@@ -79,7 +79,7 @@ onUnmounted(() => observer?.disconnect())
     <div class="btn btn-primary flex items-center justify-center p-1 rounded-lg">
       <input
         type="text"
-        placeholder="Buscar"
+        :placeholder="t('common.search')" 
         class="px-5 py-2 max-w-40 h-[50%] rounded-xl border-none outline-none text-white"
       />
     </div>

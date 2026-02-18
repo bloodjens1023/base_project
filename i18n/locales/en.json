@@ -27,5 +27,57 @@
     "week": "week",
     "mysterious": "Mysterious",
     "checkin": "check-in",
-    "roulette":"Roulette"
+    "roulette":"Roulette",
+    "withdrawal_message": "{phone} just withdrew {amount} R$",
+    "telegram": "Telegram",
+    "contactEmail": "Contact: {email}",
+    "socialMedia": "Social media",
+    "certification": "Certification",
+    "paymentMethod": "Payment method",
+    "updateTime": "Updated: {time}",
+    "backToTop": "Back to top",
+     "common": {
+        "more": "More",
+        "search": "Search"
+        
+      },
+      "games": {
+        "label": "games",
+        "demo": "Demo",
+        "empty": "No categories available"
+      },
+      "errors": {
+        "gamesLoad": "Failed to load games."
+      },
+      "Login":"Login",
+        "Ganhe R$100 de graça": "Win $100 for free",
+  "Misterioso": "Mysterious",
+  "Resgatar": "Redeem",
+  "Semana": "Week",
+  "promotional": "Promotional",
+  "vip": "VIP",
+  "Check-in": "Check-in",
+  "roleta": "Roulette",
+  "convite": "Invite",
+  "agente": "Agent",
+  "Depósito": "Deposit",
+  "Saque": "Withdrawal",
+  "Código De Bônus": "Bonus Code",
+  "Mensagem": "Message",
+  "Adiconar à tela inicial": "Add to home screen",
+  "Suporte ao vivo": "Live Support",
+  "your_number": "Your number",
+  "enter_password": "Enter your password",
+  "remember_password": "Remember password",
+  "success_entered": "✓ Logged in!",
+  "no_account": "Don't have an account?",
+  "welcome_to": "Welcome to",
+  "gaming_experience": "Providing you an unprecedented gaming experience",
+  "login": "Login",
+  "register_bonus": "Register +$3 ~ 77",
+  "success_registered": "✓ Registered!",
+  "accept_terms": "I accept all Policies and Privacy and confirm I am at least 18 years old",
+  "already_account": "Already have an account?"
+
+
   }
