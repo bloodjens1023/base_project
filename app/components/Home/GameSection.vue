@@ -46,7 +46,7 @@ const formattedCategories = computed(() =>
 
 onMounted(async () => {
   try {
-    const result = await $fetch<{ success: boolean; data: Category[] }>("/api/game")
+    const result = await $fetch<{ success: boolean; data: Category[] }>("/api/game/list")
 
     if (!result.success) throw new Error()
 
@@ -137,10 +137,10 @@ onMounted(async () => {
                   loading="lazy"
                 />
 
-                <!-- Platform -->
+                <!-- Platform
                 <span class="absolute top-2 left-2 btn btn-primary rounded-full">
                   {{ game.platformCode }}
-                </span>
+                </span> -->
 
                 <!-- Demo -->
                 <span

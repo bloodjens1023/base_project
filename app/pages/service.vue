@@ -1,46 +1,35 @@
 <template>
   <div class="max-w-[500px] mx-auto min-h-screen bg-base-100">
-    <HeaderGlobal title="Service"/>
+    <HeaderGlobal title="Service" />
+
     <div class="max-w-2xl mx-auto px-2 pt-24">
+
       <div
         v-if="!loading"
-        class="bg-primary backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center  font-Montserrat-Regular"
+        class="bg-primary backdrop-blur-md rounded-2xl shadow-2xl py-2 px-2 mb-8 text-center"
       >
         <p class="text-gray-300 text-[14px]">
           {{ t('service_description') }}
         </p>
       </div>
 
-      <div
-        v-if="loading"
-        class="flex flex-col items-center justify-center py-12"
-      >
+      <!-- Loading -->
+      <div v-if="loading" class="flex flex-col items-center justify-center py-12">
         <Loading />
       </div>
 
+      <!-- Erreur -->
       <div
         v-else-if="error"
-        class="bg-error/10 border-l-4 border-error p-4 rounded-xl backdrop-blur-sm"
+        class="bg-error/10 border-l-4 border-error p-4 rounded-xl"
       >
-        <div class="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-error mr-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+        <div class="flex items-center gap-3">
+          <LucideAlertCircle class="h-6 w-6 text-error flex-shrink-0" />
           <span class="text-error-content">{{ error }}</span>
         </div>
       </div>
 
+      <!-- Boutons -->
       <div v-else class="flex flex-col space-y-4">
         <ServiceButton
           v-for="(btn, index) in buttons"
@@ -48,39 +37,57 @@
           :title="btn.title"
           :url="btn.url"
           :jumpOut="jumpOut"
-          class="transform transition-all duration-200 hover:scale-102 hover:shadow-2xl"
+          class="transform transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl"
         />
+
+        <!-- État vide -->
+        <div
+          v-if="buttons.length === 0"
+          class="text-center py-12 text-white/40"
+        >
+          <LucideHeadphones class="w-12 h-12 mx-auto mb-3 opacity-30" />
+          <p>{{ t('service_unavailable') }}</p>
+        </div>
       </div>
+
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import HeaderGlobal from '~/components/HeaderGlobal.vue'
+import ServiceButton from '~/components/ServiceButton.vue'
+import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n()
-import { ref, onMounted } from "vue-demi";
-import HeaderGlobal from "~/components/HeaderGlobal.vue";
-import ServiceButton from "~/components/ServiceButton.vue";
 
-const buttons = ref<{ title: string; url: string }[]>([]);
-const jumpOut = ref(0);
-const loading = ref(true);
-const error = ref("");
-
+interface ServiceButton {
+  title: string
+  url: string
+}
 
 interface ServiceConfig {
-  jumpOut: number;
-  customerButtons: { title: string; url: string }[];
+  jumpOut: number
+  customerButtons: ServiceButton[]
 }
+
+const buttons = ref<ServiceButton[]>([])
+const jumpOut = ref(1)
+const loading = ref(true)
+const error = ref('')
 
 onMounted(async () => {
   try {
-    const result = await $fetch<ServiceConfig>("/api/service");
-    buttons.value = result.customerButtons;
-    jumpOut.value = result.jumpOut;
-  } catch (e) {
-    error.value = "Impossible de charger les options de service client.";
-    console.error(e);
+    // ✅ CORRIGÉ : pointe vers le nouvel endpoint qui appelle la vraie API
+    const result = await $fetch<ServiceConfig>('/api/config/service')
+    buttons.value = result.customerButtons
+    jumpOut.value = result.jumpOut
+  } catch (e: any) {
+    error.value = t('errors.serviceLoad')
+    console.error(e)
   } finally {
-    loading.value = false;
+    loading.value = false
   }
-});
+})
 </script>

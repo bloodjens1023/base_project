@@ -1,94 +1,103 @@
 <template>
   <teleport to="body">
-    <transition name="slide">
-      <div v-if="isOpen" class="fixed inset-0 z-99" @click="handleClose">
-        <div class="absolute inset-0 bg-black/50"></div>
 
+    <!-- ✅ Overlay fade séparé de la slide du aside -->
+    <Transition name="fade">
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-99 bg-black/50"
+        @click="handleClose"
+      />
+    </Transition>
+
+    <!-- ✅ Slide du aside indépendant, transition directement sur l'élément racine -->
+    <Transition name="slide">
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-100 pointer-events-none"
+      >
         <div class="max-w-[500px] mx-auto h-full relative">
           <aside
             @click.stop
-            class="absolute left-0 top-0 h-full w-[70%] bg-primary shadow-2xl overflow-y-auto scrollbar-none"
+            class="pointer-events-auto absolute left-0 top-0 h-full w-[70%] bg-primary shadow-2xl overflow-y-auto scrollbar-none"
           >
             <!-- Header fixe -->
             <div
-              class="sticky top-0 z-10 w-full 
-                      theme-bg
-                     backdrop-blur-sm text-white shadow-xl 
-                     border-b border-blue-800/30 
-                     px-4 py-4 flex items-center justify-between bg-cover bg-no-repeat"
-                      :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
-            
+              class="sticky top-0 z-10 w-full backdrop-blur-sm text-white shadow-xl
+                     border-b border-blue-800/30 px-4 py-4
+                     flex items-center justify-between
+                     bg-cover bg-no-repeat"
+              :style="{ backgroundImage: `url('/asset/OMR6_kmw.png')` }"
             >
-              <img src="/asset/svg/logo.svg" alt="" class="w-[120px]" />
+              <img src="/asset/svg/logo.svg" alt="logo" class="w-[120px]" />
 
               <button
                 @click="handleClose"
-                class="p-2 bg-base-100 cursor-pointer"
-                aria-label="Fermer"
+                class="p-2 bg-base-100 cursor-pointer rounded-lg"
+                aria-label="Fermer le menu"
               >
-                <img
-                  :src="asset('/static/svg/XVrMH9vx.svg')"
-                  alt="Close"
-                />
+                <img :src="closeIcon" alt="Close" />
               </button>
             </div>
 
-            <menu-aside-content />
+            <MenuAsideContent />
           </aside>
         </div>
       </div>
-    </transition>
+    </Transition>
+
   </teleport>
 </template>
 
-
-
 <script setup lang="ts">
-import MenuAsideContent from './MenuAsideContent.vue';
+import MenuAsideContent from './MenuAsideContent.vue'
+
 const config = useRuntimeConfig()
+const closeIcon = `${config.public.assetsURL}/static/svg/XVrMH9vx.svg`
 
-const asset = (path: string) =>
-  `${config.public.assetsURL}${path}`
+defineProps<{
+  isOpen: boolean
+}>()
 
-const bg = (path: string) =>
-  `url(${config.public.assetsURL}${path})`
+const emit = defineEmits<{
+  (e: 'close'): void
+}>()
 
-defineProps({
-  isOpen: {
-    type: Boolean,
-    required: true,
-  },
-});
-
-const emit = defineEmits(["close"]);
-
-const handleClose = () => {
-  emit("close");
-};
+const handleClose = () => emit('close')
 </script>
 
 <style scoped>
-.slide-enter-active aside,
-.slide-leave-active aside {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+/* ✅ Overlay : simple fondu */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
-.slide-enter-from aside,
-.slide-leave-to aside {
-  transform: translateX(-320px);
+/* ✅ Aside : slide depuis la gauche
+   La transition est sur l'élément racine de <Transition> directement */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.slide-enter-to aside,
-.slide-leave-from aside {
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+.slide-enter-to,
+.slide-leave-from {
   transform: translateX(0);
 }
 
-/* Masquer la scrollbar */
+/* Scrollbar cachée */
 .scrollbar-none::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 .scrollbar-none {
-  -ms-overflow-style: none; /* IE et Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>

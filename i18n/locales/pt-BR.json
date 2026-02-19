@@ -19,18 +19,17 @@
   "responsibleGamingPolicy": "Política de Jogo Responsável",
   "underageGamingPolicy": "Política de Jogo para Menores (18+ para jogar)",
   "legalNotice": "giro77.bet é uma marca administrada por GAMEWIZ BRASIL LTDA CNPJ nº 56.195.099/0001-89, devidamente autorizada pelo Ministério da Fazenda sob a Autorização SPA/MF nº 2.104-10.",
-   "disclaimer1": "1. Este produto é para uso de usuários maiores de 18 anos e é destinado apenas para fins de entretenimento.",
-    "disclaimer2": "2. Este giro77.bet contém compras no app.",
-    "disclaimer3": "3. O fato de um jogador jogar ou ganhar em um giro77.bet de apostas sociais não significa que ele ganhará em apostas com dinheiro real e jogos relacionados no futuro.",
-    "copyright": "Copyright © 2015 – 2025 giro77.bet. Todos os direitos reservados.",
-      "rescue": "Resgate",
+  "disclaimer1": "1. Este produto é para uso de usuários maiores de 18 anos e é destinado apenas para fins de entretenimento.",
+  "disclaimer2": "2. Este giro77.bet contém compras no app.",
+  "disclaimer3": "3. O fato de um jogador jogar ou ganhar em um giro77.bet de apostas sociais não significa que ele ganhará em apostas com dinheiro real e jogos relacionados no futuro.",
+  "copyright": "Copyright © 2015 – 2025 giro77.bet. Todos os direitos reservados.",
+  "rescue": "Resgate",
   "week": "Semana",
   "mysterious": "Misterioso",
   "checkin": "Check-in",
   "roulette": "Roleta",
-  
   "withdrawal_message": "{phone} acabou de retirar {amount} R$",
-    "telegram": "Telegramma",
+  "telegram": "Telegrama",
   "contactEmail": "Contato: {email}",
   "socialMedia": "Rede social",
   "certification": "Certificação",
@@ -39,7 +38,7 @@
   "backToTop": "Voltar ao topo",
   "common": {
     "more": "Mais",
-      "search": "Buscar"
+    "search": "Buscar"
   },
   "games": {
     "label": "jogos",
@@ -47,7 +46,8 @@
     "empty": "Nenhuma categoria disponível"
   },
   "errors": {
-    "gamesLoad": "Não foi possível carregar os jogos."
+    "gamesLoad": "Não foi possível carregar os jogos.",
+    "serviceLoad": "Não foi possível carregar as opções de atendimento."
   },
   "Login":"Entrar",
   "Ganhe R$100 de graça": "Ganhe R$100 de graça",
@@ -66,21 +66,44 @@
   "Mensagem": "Mensagem",
   "Adiconar à tela inicial": "Adicionar à tela inicial",
   "Suporte ao vivo": "Suporte ao vivo",
-  
   "your_number": "Seu número",
   "enter_password": "Digite sua senha",
   "remember_password": "Lembrar a senha",
-
   "success_entered": "✓ Entrado!",
   "no_account": "Não tem conta?",
   "welcome_to": "Bem-vindo ao",
   "gaming_experience": "Proporcionar a você uma experiência de jogo sem precedentes",
-  
-
-
   "login": "Entrar",
   "register_bonus": "Registrar +R$ 3 ~ 77",
   "success_registered": "✓ Cadastrado!",
   "accept_terms": "Eu aceito todas as Políticas e Privacidade e confirmo que tenho pelo menos 18 anos",
-  "already_account": "Jà tem conta?"
+  "already_account": "Já tem conta?",
+
+  "deposit_instant": "Transferência instantânea",
+  "deposit_quick_amount": "Valor rápido",
+  "deposit_custom_amount": "Valor personalizado",
+  "deposit_enter_amount": "Digite o valor",
+  "deposit_total": "Total",
+  "deposit_confirm": "Confirmar Depósito",
+  "deposit_processing": "Processando...",
+  "deposit_scan_qr": "Escaneie o QR Code para pagar",
+  "deposit_qr_expires": "O QR Code expira em 15 minutos",
+  "deposit_close": "Fechar",
+
+  "withdrawal_title": "Saque",
+  "withdrawal_balance": "Saldo disponível",
+  "withdrawal_max": "MÁX",
+  "withdrawal_amount": "Valor",
+  "withdrawal_enter_amount": "Digite o valor",
+  "withdrawal_amount_invalid": "Por favor, insira um valor válido",
+  "withdrawal_cpf_placeholder": "000.000.000-00",
+  "withdrawal_cpf_invalid": "CPF inválido",
+  "withdrawal_holder": "Nome do titular",
+  "withdrawal_holder_placeholder": "Nome completo",
+  "withdrawal_password": "Senha de saque",
+  "withdrawal_password_placeholder": "Digite sua senha",
+  "withdrawal_method": "Método",
+  "withdrawal_confirm": "Confirmar Saque",
+  "withdrawal_processing": "Processando...",
+  "withdrawal_success": "✓ Saque enviado!"
 }

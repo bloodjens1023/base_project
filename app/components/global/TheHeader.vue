@@ -35,30 +35,34 @@
       />
 
       <!-- THEME SWITCH -->
-      <div class="ml-28">
+      <!-- ✅ CORRIGÉ : plus de ml-28 fixe, utilise flex-1 + justify-center -->
+      <div class="flex-1 flex justify-center">
         <button
           @click="toggleTheme"
           class="p-2 rounded-full bg-base-100 text-white w-8 h-8 flex items-center justify-center"
-          aria-label="Toggle theme"
+          :aria-label="`Switch to ${currentTheme.label} theme`"
+          :title="currentTheme.label"
         >
-          <component :is="currentIcon" class="w-5 h-5" />
+          <!-- ✅ CORRIGÉ : icône vient de useTheme, pas d'un tableau local -->
+          <Moon v-if="currentTheme.icon === 'moon'" class="w-5 h-5" />
+          <Sun v-else class="w-5 h-5" />
         </button>
       </div>
 
       <!-- RIGHT SIDE -->
-      <div class="flex-1 flex justify-end items-center gap-2 min-w-0">
+      <div class="flex justify-end items-center gap-2 min-w-0">
         <NuxtLink
           to="/login"
           class="px-3 py-1 text-sm font-semibold whitespace-nowrap text-white"
         >
-          {{ t("enter") }}
+          {{ t('enter') }}
         </NuxtLink>
 
         <NuxtLink
           to="/register"
           class="btn btn-accent rounded-xl text-black px-3 text-sm font-semibold whitespace-nowrap"
         >
-          {{ t("register") }}
+          {{ t('register') }}
         </NuxtLink>
       </div>
     </div>
@@ -74,59 +78,34 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import { Moon, Sun } from "lucide-vue-next";
-import TheMenuAside from "../MenuAside.vue";
-import { useTheme } from "../../../composables/useTheme";
+import { ref, computed } from 'vue'
+import { Moon, Sun } from 'lucide-vue-next'
+import TheMenuAside from '../MenuAside.vue'
+// ✅ CORRIGÉ : useTheme fournit tout — toggleTheme, currentTheme, plus de logique locale
+import { useTheme } from '../../../composables/useTheme'
 
-const { t } = useI18n();
-const config = useRuntimeConfig();
-const baseURL = config.public.assetsURL;
+const { t } = useI18n()
+const config = useRuntimeConfig()
+const baseURL = config.public.assetsURL
 
-const menuOpen = ref(false);
+const menuOpen = ref(false)
 
-/* ========================
-   STYLES PRE-COMPUTED
-======================== */
-
+// ✅ Styles pre-computed (inchangé, c'était déjà bien)
 const headerStyle = computed(() => ({
   backgroundImage: `url('/asset/OMR6_kmw.png')`
-}));
+}))
 
 const decorationStyle = computed(() => ({
   backgroundImage: `url('${baseURL}/static/webp/DnbsAF0P.webp')`
-}));
+}))
 
 const bottomLineStyle = computed(() => ({
   backgroundImage: `url('${baseURL}/static/webp/B_MtXw-3.webp')`
-}));
+}))
 
-/* ========================
-   ASSETS
-======================== */
+const logoSrc = `/asset/svg/logo.svg`
+const menuIcon = `${baseURL}/static/png/Csdczrui.png`
 
-const logoSrc = `/asset/svg/logo.svg`;
-const menuIcon = `${baseURL}/static/png/Csdczrui.png`;
-
-/* ========================
-   THEME LOGIC OPTIMISÉE
-======================== */
-
-const { theme, setTheme } = useTheme();
-
-const themes = [
-  { name: "mytheme", icon: Moon },
-  { name: "mytheme2", icon: Sun }
-];
-
-const currentIcon = computed(() => {
-  const active = themes.find(t => t.name === theme.value);
-  return active?.icon ?? Moon;
-});
-
-const toggleTheme = () => {
-  const next =
-    theme.value === themes[0].name ? themes[1] : themes[0];
-  setTheme(next.name);
-};
+// ✅ CORRIGÉ : toute la logique thème vient de useTheme
+const { toggleTheme, currentTheme } = useTheme()
 </script>

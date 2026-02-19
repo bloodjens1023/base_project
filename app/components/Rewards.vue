@@ -1,22 +1,15 @@
 <template>
-  <div 
+  <div
     class="flex-1 w-full bg-cover bg-center h-18"
-    :style="{ backgroundImage: `url('https://downpg117.sp-slots1.com/source/public${bgImage}')` }"
-  >
-    <!-- Contenu optionnel -->
-  </div>
+    :style="{ backgroundImage: `url('${assetUrl}')` }"
+  />
 </template>
 
-<script setup>
-// Définir les props avec validation
-const props = defineProps({
-  bgImage: {
-    type: String,
-    required: true
-  }
-})
+<script setup lang="ts">
+const props = defineProps<{
+  bgImage: string
+}>()
 
-// Accéder à la config de manière typée
-const { $config } = useNuxtApp()
-const assetsURL = $config.public.assetsURL || ''
+const config = useRuntimeConfig()
+const assetUrl = computed(() => `${config.public.assetsURL}${props.bgImage}`)
 </script>

@@ -9,15 +9,8 @@
     <!-- Telegram -->
     <div class="flex justify-center mt-6">
       <div class="flex items-center rounded-lg bg-primary px-4 py-2 gap-2">
-        <img
-          :src="telegramIcon"
-          :alt="t('telegram')"
-          loading="lazy"
-          class="h-7 w-7"
-        />
-        <span class="text-xs font-bold">
-          {{ t('telegram') }}
-        </span>
+        <img :src="telegramIcon" :alt="t('telegram')" loading="lazy" class="h-7 w-7" />
+        <span class="text-xs font-bold">{{ t('telegram') }}</span>
       </div>
     </div>
 
@@ -33,12 +26,7 @@
         :key="icon"
         class="w-15 h-15 rounded-full flex justify-center items-center bg-primary"
       >
-        <img
-          :src="icon"
-          :alt="t('socialMedia')"
-          loading="lazy"
-          class="h-11.25"
-        />
+        <img :src="icon" :alt="t('socialMedia')" loading="lazy" class="h-11.25" />
       </div>
     </div>
 
@@ -70,9 +58,7 @@
 
     <!-- Legal -->
     <div class="w-full flex flex-col text-[12px] px-8 mt-6 font-bold">
-      <div class="leading-4 break-words">
-        {{ t('legalNotice') }}
-      </div>
+      <div class="leading-4 wrap-break-word">{{ t('legalNotice') }}</div>
       <div class="leading-4 mt-2.5 space-y-1">
         <p>{{ t('disclaimer1') }}</p>
         <p>{{ t('disclaimer2') }}</p>
@@ -87,21 +73,15 @@
         :key="payment"
         class="bg-primary rounded-xl"
       >
-        <img
-          :src="payment"
-          :alt="t('paymentMethod')"
-          loading="lazy"
-          class="w-full rounded-lg"
-        />
+        <img :src="payment" :alt="t('paymentMethod')" loading="lazy" class="w-full rounded-lg" />
       </div>
     </div>
 
     <!-- Footer -->
     <div class="text-center flex flex-col items-center text-[12px] gap-1 mt-10 font-bold">
       <span>{{ t('copyright') }}</span>
-      <div>
-        {{ t('updateTime', { time: updateTime }) }}
-      </div>
+      <!-- ✅ CORRIGÉ : updateTime vient de la config -->
+      <div>{{ t('updateTime', { time: updateTime }) }}</div>
     </div>
 
     <!-- Back To Top -->
@@ -118,12 +98,13 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
 const { t } = useI18n()
+const config = useRuntimeConfig()
 
-const supportEmail = 'support@giro77.bet'
-const updateTime = '2025-12-03 08:30:53'
+// ✅ CORRIGÉ : valeurs lues depuis nuxt.config runtimeConfig.public
+const supportEmail = config.public.supportEmail as string
+const updateTime = config.public.updateTime as string
 
 const telegramIcon = '/asset/svg/kN_fe_Gl.svg'
 
@@ -132,7 +113,7 @@ const socialIcons = [
   '/asset/svg/kN_fe_Gl.svg',
   '/asset/svg/B_Gx7ck.svg',
   '/asset/svg/URMDl3hM.svg',
-  '/asset/svg/oMuAMAQ6.svg'
+  '/asset/svg/oMuAMAQ6.svg',
 ]
 
 const policyLinks = [
@@ -142,13 +123,13 @@ const policyLinks = [
   'kycPolicy',
   'selfExclusionPolicy',
   'responsibleGamingPolicy',
-  'underageGamingPolicy'
+  'underageGamingPolicy',
 ]
 
 const certifications = [
   'https://downpg117.uqianbao.com/source/public/static/webp/CbkHlecm.webp',
   'https://downpg117.uqianbao.com/source/public/static/webp/DcWbmleq.webp',
-  'https://downpg117.uqianbao.com/source/public/static/webp/C-S8qa3_.webp'
+  'https://downpg117.uqianbao.com/source/public/static/webp/C-S8qa3_.webp',
 ]
 
 const paymentIcons = [
@@ -160,7 +141,7 @@ const paymentIcons = [
   '/asset/svg/CDma3emR.svg',
   '/asset/svg/B5U0gd8x.svg',
   '/asset/svg/BVy-OIx7.svg',
-  '/asset/svg/CllcxtMJ.svg'
+  '/asset/svg/CllcxtMJ.svg',
 ]
 
 const scrollToTop = () => {

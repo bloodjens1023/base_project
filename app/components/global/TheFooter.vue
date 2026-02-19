@@ -15,13 +15,14 @@
     <!-- Grid -->
     <div class="grid grid-cols-5 items-center h-16 w-full relative px-2">
 
-      <button
+      <NuxtLink
         v-for="item in menuItems"
         :key="item.key"
+        :to="item.route"
         class="flex flex-col items-center justify-center relative"
         :aria-label="item.label"
       >
-        <!-- Special center button -->
+        <!-- Bouton central -->
         <template v-if="item.center">
           <img
             :src="item.icon"
@@ -33,18 +34,28 @@
           </span>
         </template>
 
-        <!-- Normal button -->
+        <!-- Boutons normaux -->
         <template v-else>
           <img
             :src="item.icon"
-            class="h-5.5 mb-1 object-contain"
+            :class="[
+              'h-5.5 mb-1 object-contain transition-all duration-200',
+              // ✅ Icône active légèrement plus grande + teinte accent
+              $route.path === item.route ? 'scale-110 brightness-150' : 'opacity-70'
+            ]"
             loading="lazy"
           />
-          <span class="text-[11px] font-bold text-gray-300 text-center">
+          <span
+            :class="[
+              'text-[11px] font-bold text-center transition-colors duration-200',
+              $route.path === item.route ? 'text-accent' : 'text-gray-300'
+            ]"
+          >
             {{ item.label }}
           </span>
         </template>
-      </button>
+
+      </NuxtLink>
 
     </div>
   </footer>
@@ -55,10 +66,8 @@ import { computed } from 'vue'
 
 const { t } = useI18n()
 const config = useRuntimeConfig()
-
 const baseURL = config.public.assetsURL
 
-// Precompute styles (évite recalcul inline)
 const footerStyle = computed(() => ({
   backgroundImage: `url('${baseURL}/asset/B6QWs8Dc.png')`
 }))
@@ -67,33 +76,39 @@ const topLineStyle = computed(() => ({
   backgroundImage: `url('${baseURL}/static/webp/B_MtXw-3.webp')`
 }))
 
-// Menu configuration (scalable + propre)
 const menuItems = computed(() => [
   {
     key: 'promotion',
     label: t('promotion'),
-    icon: `/asset/svg/sIofWxJ8.svg`
+    icon: `/asset/svg/sIofWxJ8.svg`,
+    route: '/promotion'
   },
   {
     key: 'deposit',
     label: t('deposit'),
-    icon: `/asset/svg/D4seqzx_.svg`
+    icon: `/asset/svg/D4seqzx_.svg`,
+    // ✅ Navigation vers la page deposit
+    route: '/deposit'
   },
   {
     key: 'ranking',
     label: t('ranking'),
     icon: `${baseURL}/static/webp/DftLpS0R.webp`,
+    route: '/ranking',
     center: true
   },
   {
     key: 'loot',
     label: t('loot'),
-    icon: `/asset/svg/DntYU2eA.svg`
+    icon: `/asset/svg/DntYU2eA.svg`,
+    // ✅ Navigation vers la page withdrawal
+    route: '/withdrawal'
   },
   {
     key: 'personal',
     label: t('personal'),
-    icon: `/asset/svg/ChRMZLyf.svg`
+    icon: `/asset/svg/ChRMZLyf.svg`,
+    route: '/personal'
   }
 ])
 </script>

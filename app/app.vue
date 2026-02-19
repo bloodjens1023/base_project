@@ -1,32 +1,20 @@
-<script setup>
-import { useTheme } from '~~/composables/useTheme';
+<script setup lang="ts">
+import { useTheme } from '~~/composables/useTheme'
 
 const { theme } = useTheme()
 
+// ✅ Garde data-theme réactif sur <html> pour les changements live
 useHead({
   htmlAttrs: {
     'data-theme': theme
-  },
-  script: [
-    {
-      innerHTML: `
-        (function() {
-          const saved = localStorage.getItem('theme');
-          if (saved) {
-            document.documentElement.setAttribute('data-theme', saved);
-          }
-        })();
-      `,
-      type: 'text/javascript'
-    }
-  ]
+  }
 })
 </script>
 
 <template>
   <div>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout> 
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

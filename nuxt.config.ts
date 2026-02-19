@@ -8,8 +8,11 @@ export default defineNuxtConfig({
   },
  css:['~/assets/css/main.css',"./app/tailwind.css"],
 
+
   runtimeConfig: {
     public: {
+      supportEmail: 'support@giro77.bet',
+      updateTime: '2025-12-03 08:30:53',
       apiBase: '/dev-api',
       locale: 'pt-br',
       env: 'production',
