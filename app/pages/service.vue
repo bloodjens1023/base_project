@@ -15,7 +15,7 @@
 
       <!-- Loading -->
       <div v-if="loading" class="flex flex-col items-center justify-center py-12">
-        <Loading />
+        <LoadingSkeleton />
       </div>
 
       <!-- Erreur -->
@@ -59,6 +59,7 @@ import { ref, onMounted } from 'vue'
 import HeaderGlobal from '~/components/HeaderGlobal.vue'
 import ServiceButton from '~/components/ServiceButton.vue'
 import { useI18n } from 'vue-i18n'
+import LoadingSkeleton from '~/components/LoadingSkeleton.vue'
 
 const { t } = useI18n()
 
